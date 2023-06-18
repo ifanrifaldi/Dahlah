@@ -7,6 +7,7 @@ Route::controller(HomeController::class)->group(function () {
 
     Route::get('/', 'beranda'); 
     Route::get('vtour', 'vtour'); 
+    Route::get('view/{vtour}', 'view'); 
     Route::get('foto', 'foto'); 
     Route::get('video', 'video'); 
 });

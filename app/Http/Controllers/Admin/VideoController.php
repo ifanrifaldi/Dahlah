@@ -14,12 +14,6 @@ class VideoController extends Controller{
         return view('admin.video.index', $data);
     }
 
-    function create(){
-        $data['user'] = auth()->user();
-        return view('admin.video.create', $data);
-        
-    }
-
     function store(){
         $video = new Video;
         $video->judul = request('judul');
@@ -27,37 +21,31 @@ class VideoController extends Controller{
         $video->link = request('link'); 
         $video->save();
 
-        
-
         return redirect('admin/video')->with('success', 'Data Berhasil Ditambahkan');
     
     }
 
-    function show(Video $video){
-        $data['user'] = auth()->user();
-        $data['video'] = $video;
-        return view('admin.video.show', $data);
+    // function show(Video $video){
+    //     $data['user'] = auth()->user();
+    //     $data['video'] = $video;
+    //     return view('admin.video.show', $data);
         
-    }
-
-    function edit(Video $video){
-        $data['user'] = auth()->user();
-        $data['video'] = $video;
-        return view('admin.video.edit', $data);
-    }
+    // }
 
     function update(Video $video){
         $video->judul = request('judul'); 
         $video->deskripsi = request('deskripsi');      
         $video->link = request('link');   
         $video->save();
-
         
-
-        
-
         return redirect('admin/video')->with('success', 'Data Berhasil Diedit');
     
+        
+    }
+    function show(Video $video){
+        $data['user'] = auth()->user();
+        $data['video'] = $video;
+        return view('admin.video.show', $data);
         
     }
 

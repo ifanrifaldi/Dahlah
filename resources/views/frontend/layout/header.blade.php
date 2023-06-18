@@ -1,4 +1,4 @@
-<div class="top-bar">
+<!-- <div class="top-bar">
     <div class="container">
         <div class="row">
             <div class="col-md-6 tb-left">
@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 @php
 function checkRouteActive($route)
@@ -49,7 +49,7 @@ return 'active';
             <!-- -- -- - -- -- -- - -- -- -- - -- -- -- -- -
                   LOGO START
                   -- -- -- - -- -- -- - -- -- -- - -- -- -- -- -->
-            <a class="navbar-brand" href="home_1.html"> <img alt="" src="{{url ('public/template') }}/images/logo.png"></a>
+            <a class="navbar-brand" href="home_1.html"> <img alt="" src="{{url ('public/template') }}/images/brands/logo.png" style="height: 50px;"></a>
             <!-- -- -- - -- -- -- - -- -- -- - -- -- -- -- -
                   LOGO END
                   -- -- -- - -- -- -- - -- -- -- - -- -- -- -- -->
@@ -64,11 +64,11 @@ return 'active';
                         <!-- -- -- - -- -- -- - -- -- -- - -- -- -- -- -
                            MENU HOME START
                            -- -- -- - -- -- -- - -- -- -- - -- -- -- -- -->
-                        <li class="header-customize {{ checkRouteActive('/') }} ">
+                        <li class="nav-item {{ checkRouteActive('/') }} ">
                             <a class="nav-link " href="{{ url('/') }}">Beranda</a>
                         </li>
-                        <li class="header-customize {{ checkRouteActive('vtour') }} ">
-                            <a class="nav-link " href="{{ url('vtour') }}">Vtour</a>
+                        <li class="nav-item {{ checkRouteActive('vtour') }} ">
+                            <a class="nav-link " href="{{ url('vtour') }}">V-tour</a>
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link " href="{{ url('profil') }}">Vtour</a>
@@ -77,7 +77,7 @@ return 'active';
                                 Galery<span class="x-caret"></span></a>
                             <ul class="dropdown-menu dropdown-menu-left">
                                 <li><a href="{{ url('foto') }}">Foto</a></li>
-                                <li><a href="{{ url('foto') }}">Video</a></li>
+                                <li><a href="{{ url('video') }}">Video</a></li>
                             </ul>
                         </li>
 

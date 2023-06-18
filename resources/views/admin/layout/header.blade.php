@@ -3,8 +3,8 @@
     <!-- LOGO -->
     <div class="topbar-left">
         <a href="index.html" class="logo">
-            <img src="{{url('public/admin')}}/assets/images/logo-light.png" class="logo-lg" alt="" height="22">
-            <img src="{{url('public/admin')}}/assets/images/logo-sm.png" class="logo-sm" alt="" height="24">
+            <img src="{{url('public/admin')}}/assets/images/logo2.png" class="logo-lg" alt="" height="45">
+            <img src="{{url('public/admin')}}/assets/images/politap.png" class="logo-sm" alt="" height="24">
         </a>
     </div>
 

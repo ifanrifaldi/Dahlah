@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Foto;
 use App\Models\Video;
+use App\Models\Vtour;
 
 class HomeController extends Controller
 {   
@@ -14,14 +15,19 @@ class HomeController extends Controller
         return view('frontend.beranda',$data);
     }
     public function vtour(){
-        return view('frontend.vtour');
+        $data['list_vtour'] = Vtour::all();
+        return view('frontend.vtour.vtour', $data);
+    }
+    public function view($vtour){
+        $data['vtour'] = Vtour::find($vtour);
+        return view('frontend.vtour.view',$data);
     }
     public function foto(){
-        $data['list_foto'] = Foto::all();
+        $data['list_foto'] = Foto::Paginate(9);
         return view('frontend.galery.foto',$data);
     }
     public function video(){
-        $data['list_video'] = Video::all();
+        $data['list_video'] = Video::Paginate(9);
         return view('frontend.galery.video ', $data);
     }
 }

@@ -4498,21 +4498,21 @@ a#playVid i {
 .page-head-blog,
 .page-head-shop,
 .page-head-project {
-    background: #000 url(../images/head/bg-page-title.jpg) no-repeat center;
+    background: #000 url(../images/bg/bg2.jpg) no-repeat center;
     background-size: cover;
     padding: 102px 0px 101px;
 }
 
 .page-head-blog {
-    background: #000 url(../images/44.jpg) no-repeat center;
+    background: #000 url(../images/bg/bg2.jpg) no-repeat center;
 }
 
 .page-head-shop {
-    background: #000 url(../images/head/bg-shop-title.jpg) no-repeat center;
+    background: #000 url(../images/bg/bg2.jpg) no-repeat center;
 }
 
 .page-head-project {
-    background: #000 url(../images/head/bg-project.title.jpg) no-repeat center;
+    background: #000 url(../images/bg/bg2.jpg) no-repeat center;
 }
 
 .page-head h1 {
@@ -7687,7 +7687,7 @@ blockquote cite {
 }
 
 footer {
-    background: url(../images/44.jpg) no-repeat fixed;
+    background: url(../images/REVSLIDER/1.jpg) no-repeat fixed;
     background-size: cover;
     padding: 60px 0 0;
 }
