@@ -27,5 +27,5 @@
         </div>
     </div>
 </div>
-{{$list_foto->links( 'pagination::bootstrap-4' )}}
+<h1 style="margin-left: 10%;">{{$list_foto->links( 'pagination::bootstrap-4' )}}</h1>
 @endsection

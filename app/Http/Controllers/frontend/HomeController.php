@@ -23,7 +23,7 @@ class HomeController extends Controller
         return view('frontend.vtour.view',$data);
     }
     public function foto(){
-        $data['list_foto'] = Foto::Paginate(9);
+        $data['list_foto'] = Foto::Paginate(3);
         return view('frontend.galery.foto',$data);
     }
     public function video(){

@@ -46,14 +46,14 @@
                                 <div class="form-group">
                                     <div class="col-12">
                                         <label for="username">Email</label>
-                                        <input class="form-control" type="email" required="" id="email" placeholder="email" required>
+                                        <input class="form-control" type="email" name="email" placeholder="email" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <div class="col-12">
                                         <label for="password">Password</label>
-                                        <input class="form-control" name="password" type="password" id="password" placeholder="Password" required>
+                                        <input class="form-control" name="password" type="password" placeholder="Password" required>
                                     </div>
                                 </div>
 
@@ -61,7 +61,7 @@
 
                                 <div class="form-group text-center mt-3">
                                     <div class="col-12">
-                                        <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Log In</button>
+                                        <button class="btn btn-primary btn-block waves-effect waves-light">Log In</button>
                                     </div>
                                 </div>
 
