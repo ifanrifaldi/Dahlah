@@ -26,12 +26,6 @@ class FotoController extends Controller{
         return redirect('admin/foto')->with('success', 'Data Berhasil Ditambahkan');
     
     }
-    function edit(Foto $foto){
-        $data['user'] = auth()->user();
-        $data['foto'] = $foto;
-        $data['judul'] = $foto;
-        return view('admin.foto.edit', $data);
-    }
 
     function update($foto){
         $foto = Foto::find($foto);

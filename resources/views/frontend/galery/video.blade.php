@@ -4,10 +4,10 @@
 <div class="page-head overlay-wrap">
     <div class="overlay"></div>
     <div class="container text-uppercase">
-        <h1>Features Shortcode</h1>
+        <h1>GALERY VIDEO</h1>
         <ul class="bcrumbs">
-            <li><a href="#"><i class="fa fa-home"></i></a></li>
-            <li>Features Shortcode</li>
+            <li><a href="{{url ('/')}}"><i class="fa fa-home"></i></a></li>
+            <li>GALERY VIDEO</li>
         </ul>
     </div>
 </div>
@@ -18,12 +18,12 @@
             <div class="col-md-4 col-sm-12 col-xs-12">
             <iframe src ="https://www.youtube.com/embed/{{ $video->link }}" style="height: 250px;"> </iframe>
                 <div class="home-info-content">
-                    <h4><i class="fa fa-camera"></i><a href="#">{{ $video->judul }}
-                            Us</a></h4>
+                    <h4><i class="fa fa-youtube"></i><a href="#">{{ $video->judul }}</a></h4>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
 </div>
+{{$list_video->links( 'pagination::bootstrap-4' )}}
 @endsection

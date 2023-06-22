@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use Auth;
 
 class AuthController extends Controller
 {
+
   
     public function login(){
 
@@ -17,10 +17,10 @@ class AuthController extends Controller
 	public function LoginProses(){
 		 
         if (auth()->guard('admin')->attempt(['email' => request('email'), 'password' => request('password')])){
-            return redirect('admin/dashboard')->with('success', 'Login Berhasil');
+            return redirect('admin')->with('success', 'Login Berhasil');
         }
 
-		return redirect('login');
+		return back()->with('warning', 'Login Gagal, Silahkan Cek Email Dan Password Anda');
 	}
 
 	public function logout(Request $request){

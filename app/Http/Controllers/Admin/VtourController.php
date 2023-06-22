@@ -14,24 +14,14 @@ class VtourController extends Controller{
         return view('admin.vtour.index', $data);
     }
 
-    function create(){
-        $data['user'] = auth()->user();
-        $data['list_tempat'] = Tempat::all();
-        return view('admin.vtour.create', $data);
-        
-    }
-
     function store(Request $request){
 
-
-    
         $vtour = new Vtour;  
-        $vtour->id_tempat = request('id_tempat');         
+        $vtour->judul = request('judul');         
+        $vtour->nama_tempat = request('nama_tempat');         
         $vtour->deskripsi = request('deskripsi');
         $vtour->handleUploadFoto();
         $vtour->save();
-
-        
 
         return redirect('admin/vtour')->with('success', 'Data Berhasil Ditambahkan');
     
@@ -44,25 +34,16 @@ class VtourController extends Controller{
         
     }
 
-    function edit(Vtour $vtour){
-        $data['user'] = auth()->user();
-        $data['vtour'] = $vtour;
-        return view('admin.vtour.edit', $data);
-    }
-
     function update(Vtour $vtour){
        
+        $vtour->judul = request('judul');         
+        $vtour->nama_tempat = request('nama_tempat');         
         $vtour->deskripsi = request('deskripsi');
         $vtour->handleUploadFotoUpdate();
         $vtour->save();
 
-        
-
-        
-
         return redirect('admin/vtour')->with('success', 'Data Berhasil Diedit');
     
-        
     }
 
     function destroy(Vtour $vtour){

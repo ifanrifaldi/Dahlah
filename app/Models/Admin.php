@@ -2,9 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Str;
-use App\Models\Model;
 use App\Models\ModelAuthenticate;
+use Illuminate\Support\Str;
 
 class Admin extends ModelAuthenticate
 {

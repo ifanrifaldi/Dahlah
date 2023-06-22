@@ -1,4 +1,5 @@
 @extends('admin.base')
+@section('title', 'Admin')
 @section('content')
 
 <div class="container-fluid">
@@ -10,7 +11,7 @@
                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                         <div>
                         <button type="button" class="btn btn-primary float-left mb-10" data-toggle="modal"
-                            data-target="#modal-lg"><span class="fa fa-plus"></span> Tambah Data
+                            data-target="#modal-lg"><span class="fa fa-plus"></span>
                         </button>
                         </div>
                         <br>
@@ -71,7 +72,7 @@
                                                         <div class="form-group row">
                                                             <label class="col-sm-2 col-form-label">Email</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control" name=""
+                                                                <input type="text" class="form-control" name="email"
                                                                     value="{{ $admin->email }}">
                                                             </div>
                                                         </div>
@@ -133,16 +134,17 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <label class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" name="password" placeholder="Password">
+                                <input type="text" class="form-control" name="email" placeholder="Email"
+                                    required>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Foto</label>
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
                             <div class="col-sm-10">
-                                <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg">
+                                <input type="password" class="form-control" name="password" placeholder="Password">
                             </div>
                         </div>
 

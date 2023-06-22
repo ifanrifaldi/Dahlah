@@ -4,7 +4,6 @@ namespace App\Models;
 
  use Illuminate\Support\Str;
 use App\Models\Model;
-use App\Models\Tempat;
 
 class Vtour extends Model
 {
@@ -12,9 +11,9 @@ class Vtour extends Model
     protected $table = 'vtour';
 	protected $primaryKey = 'id';
 
-    function Tempat(){
-        return $this->belongsTo(Tempat::class, 'id_tempat');
-    }
+    // function Tempat(){
+    //     return $this->belongsTo(Tempat::class, 'id_tempat');
+    // }
 
 
     
